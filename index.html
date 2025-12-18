@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ClearPath Consulting Group LLC provides execution-focused business consulting and administrative setup support for small businesses in Florida and nationwide (remote). Clear scope, clean documentation, and reliable delivery." />
+  <title>ClearPath Consulting Group LLC | Business Consulting & Admin Setup</title>
+
+  <!-- Social -->
+  <meta property="og:title" content="ClearPath Consulting Group LLC | Business Consulting" />
+  <meta property="og:description" content="Clear, compliant, execution-focused consulting for businesses that want momentum, not confusion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theclearpathclearly.com" />
+
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --muted:#b7c0d6;
+      --text:#eaf0ff;
+      --brand:#7dd3fc;
+      --brand2:#a78bfa;
+      --ok:#34d399;
+      --warn:#fbbf24;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(125,211,252,.18), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(167,139,250,.16), transparent 55%),
+        linear-gradient(180deg, #070b14 0%, var(--bg) 35%, #060913 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.70);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;}
+    .mark{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 30px rgba(125,211,252,.18);
+    }
+    .nav-links{display:flex; align-items:center; gap:18px; font-weight:650; color:var(--muted);}
+    .nav-links a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:750;
+      gap:10px;
+      transition:.18s transform, .18s background, .18s border;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,139,250,.95));
+      color:#081022;
+      border-color: transparent;
+      box-shadow: var(--shadow);
+    }
+    .btn.primary:hover{transform: translateY(-1px) scale(1.01)}
+    .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}
+
+    .hero{padding:56px 0 26px;}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+      font-weight:650;
+      width:fit-content;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: var(--ok);
+      box-shadow: 0 0 0 6px rgba(52,211,153,.14);
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(32px, 4.2vw, 52px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .lead{color:var(--muted); font-size:18px; max-width: 60ch;}
+    .hero-actions{margin-top:18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;}
+    .trust-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; color:var(--muted); font-weight:650;}
+    .pill{
+      padding:8px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(255,255,255,.03);
+      display:inline-flex; align-items:center; gap:8px;
+    }
+
+    .card{
+      background: rgba(15,26,51,.75);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 35px rgba(0,0,0,.22);
+    }
+    .hero-card{padding:18px; display:flex; flex-direction:column; gap:14px; min-height: 100%;}
+    .hero-card h3{margin:2px 0 0; font-size:18px}
+    .hero-card p{margin:0; color:var(--muted)}
+    .mini{display:grid; gap:12px}
+    .mini .row{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .icon{
+      width:28px; height:28px; border-radius:10px;
+      background: rgba(125,211,252,.16);
+      border:1px solid rgba(125,211,252,.22);
+      flex:0 0 auto;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color:var(--brand);
+    }
+
+    .section{padding:34px 0}
+    .section h2{
+      font-size: clamp(24px, 3vw, 34px);
+      margin:0 0 8px;
+      letter-spacing:-.4px;
+    }
+    .section .sub{color:var(--muted); margin:0 0 18px; max-width: 78ch;}
+
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    .service{padding:16px}
+    .service h3{margin:8px 0 6px}
+    .service p{margin:0; color:var(--muted)}
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:700; font-size:13px;
+      width:fit-content;
+    }
+
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:stretch;}
+    .panel{padding:18px}
+    .steps{display:grid; gap:10px; margin-top:10px}
+    .step{
+      padding:12px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      display:flex; gap:12px;
+    }
+    .num{
+      width:28px; height:28px; border-radius:10px;
+      background: rgba(167,139,250,.16);
+      border:1px solid rgba(167,139,250,.22);
+      color: var(--brand2);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; flex:0 0 auto;
+    }
+    .step b{display:block}
+    .step span{color:var(--muted)}
+
+    .testimonials{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    blockquote{margin:0; padding:16px}
+    blockquote p{margin:0 0 10px; color:var(--muted)}
+    blockquote footer{display:flex; gap:10px; align-items:center; color:var(--text); font-weight:800}
+    .star{color: var(--warn)}
+
+    .cta{
+      padding:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      background: linear-gradient(135deg, rgba(125,211,252,.14), rgba(167,139,250,.12));
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .contact{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
+    form{display:grid; gap:10px;}
+    label{font-weight:750; font-size:14px; color:var(--muted)}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+      font-family:var(--font);
+      font-size:15px;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input:focus, textarea:focus{border-color: rgba(125,211,252,.55)}
+    .two{display:grid; grid-template-columns: 1fr 1fr; gap:10px;}
+    .note{color:var(--muted); font-size:13px}
+
+    .footer{
+      padding:26px 0 34px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .footer .cols{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr .7fr;
+      gap:14px;
+      align-items:start;
+    }
+    .legal{font-size:13px; color:rgba(183,192,214,.85)}
+    .mutedlink{color:var(--muted)}
+    .mutedlink:hover{color:var(--text)}
+
+    .mobile-only{display:none}
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .split{grid-template-columns: 1fr}
+      .testimonials{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+      .footer .cols{grid-template-columns: 1fr}
+      .nav-links{display:none}
+      .mobile-only{display:inline-flex}
+    }
+  </style>
+
+  <!-- LocalBusiness schema (safe, minimal) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClearPath Consulting Group LLC",
+    "telephone": "+18559728448",
+    "email": "admin@theclearpathclearly.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Florida", "United States"],
+    "url": "https://theclearpathclearly.com",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo" aria-label="ClearPath Consulting Group LLC Home">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:15px; line-height:1.1;">ClearPath Consulting Group LLC</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Business Consulting • Admin Setup • Documentation</div>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a class="btn small mobile-only" href="#contact">Contact</a>
+        <a class="btn small" href="tel:+18559728448" aria-label="Call ClearPath">Call</a>
+        <a class="btn primary" href="#contact">Request a Consult</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Remote-first • Florida + nationwide support • Response within 24 hours</div>
+          <h1>Clear, compliant, execution-focused consulting <br/>for businesses that want momentum, not confusion.</h1>
+          <p class="lead">
+            ClearPath Consulting Group LLC helps individuals, startups, and small businesses organize operations, align documentation, and build
+            simple systems that hold up under professional review. Clean scope, clean paperwork, clean execution.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Request a Consultation</a>
+            <a class="btn" href="tel:+18559728448">Call: 1 (855) 972-8448</a>
+            <a class="btn" href="mailto:admin@theclearpathclearly.com">Email</a>
+          </div>
+
+          <div class="trust-row" aria-label="Trust signals">
+            <span class="pill">✅ Written scope & deliverables</span>
+            <span class="pill">🧾 Documentation-first</span>
+            <span class="pill">🔒 Privacy-minded process</span>
+            <span class="pill">⏱ Fast turnaround options</span>
+          </div>
+        </div>
+
+        <aside class="card hero-card" aria-label="Quick facts">
+          <h3>What you get</h3>
+          <p>Structured support that reduces risk, improves clarity, and makes your business easier to run.</p>
+
+          <div class="mini">
+            <div class="row">
+              <div class="icon" aria-hidden="true">✓</div>
+              <div>
+                <b>Clear deliverables</b>
+                <span class="note">No vague “consulting talk.” You receive concrete outputs.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="icon" aria-hidden="true">⏵</div>
+              <div>
+                <b>Admin setup & cleanup</b>
+                <span class="note">Organize your systems so you can scale without chaos.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="icon" aria-hidden="true">🧠</div>
+              <div>
+                <b>Review-ready structure</b>
+                <span class="note">Help align documentation and process for professional scrutiny.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <span class="tag">Service Area: Florida + remote US</span>
+            <span class="tag">Consults: phone/video</span>
+          </div>
+
+          <div class="note" style="margin-top:4px;">
+            Note: We provide consulting and administrative support. We are not a law firm and do not provide legal advice.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <h2>Services</h2>
+        <p class="sub">Choose what you need. We confirm scope, timeline, and deliverables in writing before work begins.</p>
+
+        <div class="grid3">
+          <div class="card service">
+            <div class="tag">Structure</div>
+            <h3>Business setup support</h3>
+            <p>Guided administrative setup and planning for new and growing businesses. Clear steps, less guesswork.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag">Alignment</div>
+            <h3>Trust-owned LLC admin alignment</h3>
+            <p>Help organizing the practical side of trust-owned entity operations so things stay consistent and review-ready.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag">Documentation</div>
+            <h3>Documentation review & organization</h3>
+            <p>Clean up your files, records, and workflows so you can answer “show me” questions without panic.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag">Operations</div>
+            <h3>Process & system building</h3>
+            <p>Simple systems for intake, tracking, communications, and handoffs. Less chaos, more execution.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag">Compliance-minded</div>
+            <h3>Administrative compliance support</h3>
+            <p>Help building checklists and routines to stay on top of filings, renewals, and internal documentation hygiene.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag">Custom</div>
+            <h3>Special projects</h3>
+            <p>Tell us the outcome you want. If it’s reasonable, we’ll scope it, price it, and deliver it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="wrap split">
+        <div class="card panel">
+          <h2>How it works</h2>
+          <p class="sub">A straightforward process designed for clarity, speed, and accountability.</p>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div><b>Intake</b><span> You share your goal, current situation, and any relevant documents.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div><b>Written scope</b><span> We define deliverables, timeline, and pricing in writing.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div><b>Execution</b><span> We work the plan, keep communication clear, and deliver outputs.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div><b>Handoff</b><span> You receive organized materials and next-step recommendations.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card panel">
+          <h2>What we optimize for</h2>
+          <p class="sub">The goal is simple: make your business easier to operate and easier to verify.</p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="num">✓</div>
+              <div><b>Clarity</b><span> Your structure and documents should make sense at a glance.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">✓</div>
+              <div><b>Consistency</b><span> Fewer mismatches across filings, records, and communications.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">✓</div>
+              <div><b>Execution</b><span> Useful deliverables, not endless “strategy conversations.”</span></div>
+            </div>
+          </div>
+
+          <div class="cta card" style="margin-top:14px;">
+            <div>
+              <div style="font-weight:900; font-size:18px;">Need fast cleanup?</div>
+              <div class="note">Ask about priority scheduling for documentation and admin organization.</div>
+            </div>
+            <a class="btn primary" href="#contact">Request a Consult</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="wrap">
+        <h2>Reviews</h2>
+        <p class="sub">Add real client reviews here later. For now, these are placeholders so the page doesn’t look empty and sad.</p>
+
+        <div class="testimonials">
+          <blockquote class="card">
+            <div class="star" aria-hidden="true">★★★★★</div>
+            <p>“Clear scope, fast turnaround, and the deliverables were actually usable. Exactly what we needed.”</p>
+            <footer>— Client, Florida</footer>
+          </blockquote>
+          <blockquote class="card">
+            <div class="star" aria-hidden="true">★★★★★</div>
+            <p>“They helped organize our documents and processes so everything matched and made sense.”</p>
+            <footer>— Small Business Owner</footer>
+          </blockquote>
+          <blockquote class="card">
+            <div class="star" aria-hidden="true">★★★★★</div>
+            <p>“No fluff. Just structure, systems, and real outputs we could implement immediately.”</p>
+            <footer>— Founder</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap contact">
+        <div class="card panel">
+          <h2>Request a consultation</h2>
+          <p class="sub">Send the basics and we’ll respond within 24 hours.</p>
+
+          <!-- Demo form. To make it send to your inbox, connect Formspree/Netlify or your backend -->
+          <form id="quoteForm">
+            <div class="two">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="(###) ###-####" autocomplete="tel" required />
+              </div>
+            </div>
+
+            <div class="two">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" />
+              </div>
+              <div>
+                <label for="topic">Topic</label>
+                <input id="topic" name="topic" placeholder="Setup, admin alignm
